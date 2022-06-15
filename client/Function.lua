@@ -102,20 +102,4 @@ function EndCreator()
     SetEntityCoords(PlayerPedId(), Creator.spawnPos.x, Creator.spawnPos.y, Creator.spawnPos.z)
     DisplayRadar(true)
     ESX.ShowNotification(Creator.spawnNotif)
-end
-
--- Change clothes 
-
-function changeClothes()
-    TriggerEvent('skinchanger:getSkin', function(skin)
-        local outfit
-        if skin.sex == 0 then
-            outfit = Config.tenue.male
-        else
-            outfit = Config.tenue.female
-        end
-        if outfit then
-            TriggerEvent('skinchanger:loadClothes', skin, outfit)
-        end
-    end)
-end
+end 
