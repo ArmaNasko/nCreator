@@ -106,7 +106,7 @@ end
 
 -- Change clothes 
 
-function vuniformetaxi()
+function changeClothes()
     TriggerEvent('skinchanger:getSkin', function(skin)
         local outfit
         if skin.sex == 0 then
