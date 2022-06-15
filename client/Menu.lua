@@ -252,9 +252,3 @@ function CreatorMenu()
         end
     end
 end
-
-
-RegisterCommand("creator", function()
-    CreatorMenu()
-    SkinCam()
-end)
