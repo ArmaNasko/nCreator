@@ -52,9 +52,9 @@ function CreatorMenu()
             RageUI.Button("Sexe :", nil, {RightLabel = getPlayerInfo.sex}, cooldown, {}, selectGender)
 
             if getPlayerInfo.firstName == nil or getPlayerInfo.lastName == nil or getPlayerInfo.dateOfBirth == nil or getPlayerInfo.height == nil or getPlayerInfo.sex == nil then
-                RageUI.Button("Valider", "~r~Attention~s~ : Vous ne pourrez plus modifier votre identité ni votre sexe !", {}, false, {})
+                RageUI.Button("Valider", "~r~Attention~s~ : Vous ne pourrez plus modifier votre identité ni votre sexe !", {RightBadge = RageUI.BadgeStyle.Tick}, false, {})
             else
-                RageUI.Button("Valider", "~r~Attention~s~ : Vous ne pourrez plus modifier votre identité ni votre sexe !", {}, true, {
+                RageUI.Button("Valider", "~r~Attention~s~ : Vous ne pourrez plus modifier votre identité ni votre sexe !", {RightBadge = RageUI.BadgeStyle.Tick}, true, {
                     onSelected = function()
                         cooldown = false
                         TriggerServerEvent("nCreator:save", getPlayerInfo)
@@ -140,7 +140,7 @@ function CreatorMenu()
                 end,
             })
 
-            RageUI.Button("Valider", "~r~Attention~s~ : Vous ne pourrez plus modifier votre personnage !", {}, true, {}, selectClothes)
+            RageUI.Button("Valider", "~r~Attention~s~ : Vous ne pourrez plus modifier votre personnage !", {RightBadge = RageUI.BadgeStyle.Tick}, true, {}, selectClothes)
 
 
             RageUI.ColourPanel("Couleur Principale", RageUI.PanelColour.HairCut, IndexPanel.ChevColor.primary[1], IndexPanel.ChevColor.primary[2], {
@@ -229,7 +229,7 @@ function CreatorMenu()
                 end
             })
 
-            RageUI.Button("Valider", nil, {}, true, {
+            RageUI.Button("Valider", nil, {RightBadge = RageUI.BadgeStyle.Tick}, true, {
                 onSelected = function()
                     RageUI.CloseAll()
                     RenderScriptCams(false, false, 0, true, true)
