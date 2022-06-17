@@ -17,11 +17,6 @@ IndexPanel = {
     percent2 = 0.0
 }
 
-
-RegisterCommand("testC", function()
-    CreatorMenu()
-end)
-
 -- imput
 function Imput(TextEntry, ExampleText, MaxStringLenght)
     AddTextEntry("FMMC_KEY_TIP1", TextEntry)
